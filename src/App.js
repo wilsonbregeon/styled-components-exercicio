@@ -1,4 +1,8 @@
 import React from "react";
+import  {Header} from "./Componentes/Header";
+import { Main } from "./Componentes/Main";
+import { Nav } from "./Componentes/Nav";
+import { Section } from "./Componentes/Section";
 import CardVideo from "./Componentes/CardVideo";
 import "./styles.css";
 
@@ -12,13 +16,13 @@ export default function App() {
   return (
     <div>
       <div className="tela-inteira">
-        <header>
+      <Header>
           <h1>LabeTube</h1>
           <input type="text" placeholder="Busca" id="campoDeBusca" />
-        </header>
+      </Header>
 
-        <main>
-          <nav className="menu-vertical">
+        <Main>
+          <Nav>
             <ul>
               <li className="botoes-meunu-vertical">Início</li>
               <li className="botoes-meunu-vertical">Em alta</li>
@@ -27,16 +31,16 @@ export default function App() {
               <li className="botoes-meunu-vertical">Originais</li>
               <li className="botoes-meunu-vertical">Histórico</li>
             </ul>
-          </nav>
+          </Nav>
 
-          <section className="painel-de-videos">
+          <Section>
             <CardVideo
               image1={card1.imagemDoVideo}
               titulo={card1.titulo}
               textoAlternativo={card1.textoAlternativo}
             />
-          </section>
-        </main>
+          </Section>
+        </Main>
 
         <footer>
           <h4>Oi! Eu moro no footer!</h4>
